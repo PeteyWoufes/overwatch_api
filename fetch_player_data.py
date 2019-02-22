@@ -1,6 +1,5 @@
 import argparse
 import json
-
 from overwatch import Overwatch
 
 
@@ -8,6 +7,7 @@ def main():
     args = fetch_args()
     player_data = call_overwatch_api(args.tag)
     return_player_data(player_data(mode=args.mode, filter=args.filter))
+    return 0
 
 
 def fetch_args():
